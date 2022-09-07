@@ -1,14 +1,9 @@
-// var myHeaders = new Headers();
-// myHeaders.append("apikey", "Xu6aoyvyFmbIyXArnT1MyoX70pXXHcub");
+import axios from 'axios';
 
-// var requestOptions = {
-//   method: 'GET',
-//   redirect: 'follow',
-//   headers: myHeaders
-// };
-
-// fetch("https://api.apilayer.com/exchangerates_data/convert?to=AZN&from=EUR&amount=100", requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
-
+export const api = axios.create({
+	baseURL: 'https://api.apilayer.com/exchangerates_data',
+	redirect: 'follow',
+	headers: {
+		apikey: 'Z3utNLhuS1FxfJ4cwBV352mkavvrRhkz',
+	},
+});
